@@ -1,0 +1,81 @@
+/**
+ * 定义全局变量
+ */
+@version: "0.1.0"; // 版本
+
+// font Base 是在满足咱们设计要求的字体基础上，引用了alice设定的字体配置
+// 这样能在没有对应字体的时候，比较良好的展示页面效果
+// @fontBaseYahei: "microsoft yahei",tahoma,arial,"Hiragino Sans GB","\5b8b\4f53";
+@fontBaseYahei: "Helvetica Neue",helvetica,'lucida grande','lucida sans unicode',lucida,'Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei',sans-serif;
+@fontBaseSimsun: "\5b8b\4f53",tahoma,arial,"Hiragino Sans GB","microsoft yahei";
+@font: microsoft yahei, arial;
+
+@cont-width: 980px;
+
+/**
+ * img path
+ */
+// @img-path: "./img/"; //css page path
+// @img-path-common: "@{img-path}common/";
+// @img-path-lr: "@{img-path}lr/";
+@img-path: '../images/';
+@img-path-lr: '@{img-path}lr/';
+
+/**
+ * color
+ */
+@body-color: #ededed;
+@nav-color: #ffda44;
+@border-color: #cdcdcd;
+@font-color: #666;
+@font-color-important: #666666;
+@base-font-size: 38px;
+@base-line-height: 1.5;
+
+
+/**
+ * size
+ */
+
+// 设计稿的宽度
+@design-width: 1080px;
+
+// 设计稿和真实尺寸之间的比例. 
+// 比如用iPhone6做样例(375*568)
+// 如果设计稿的尺寸是375*568 那么scale是1;
+// 如果设计稿是750*1136 那么scale是2
+//
+// 本项目的设计稿尺寸是 1080宽度 针对6s plus 是
+// @design-scale: 1080px/414px; 
+@design-scale: 1px/1px; 
+
+// 一个rem和px之间的换算比例
+// 在切页面的时候, 按照设计稿的宽度定义1rem, 根据此值把psd里面的相关尺寸转为rem
+// 在页面渲染的时候, 由js根据当前页面的clientWidth和dpr得出当前页面的1rem clientWdith * dpr / 10
+// 这样渲染的时候, 就能等比的把psd里面的尺寸渲染到屏幕上.
+@base-font: @design-width / 10;
+
+@min-font-size: 12px; // chrome能接受的最小文字尺寸 
+
+
+@nav-height: 132px;
+@tab-bar-height: 150px;
+@game-cloumn-bar-height: 92px;
+
+// img-list
+@img-list-size: 250px;
+@img-list-gap: 16px;
+
+// game-img
+@game-img-width: 250px;
+@game-img-height: 250px;
+@game-img-border-raidus: 24px;
+
+// game-box
+@game-box-title-left: 53px; // 标题的玩蛋和左边界的距离
+@game-box-title-height: 85px;
+
+// game list img
+@game-list-img-width: 240px;
+@game-list-img-height: 240px;
+@game-list-img-border-raidus: 24px;

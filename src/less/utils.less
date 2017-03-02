@@ -1,0 +1,224 @@
+/**
+ * 设定尺寸
+ */
+@import "rem.less";
+.size(@w, @h){
+    .px2rem(width, @w);
+    .px2rem(height, @h);
+}
+.square(@size){
+    .size(@size, @size);
+}
+.width(@w){
+    .px2rem(width, @w);
+}
+.max-width(@w){
+    .px2rem(max-width, @w);
+}
+.min-width(@w){
+    .px2rem(min-width, @w);
+}
+.height(@h){
+    .px2rem(height, @h);
+}
+.max-height(@h){
+    .px2rem(max-height, @h);
+}
+.min-height(@h){
+    .px2rem(min-height, @h);
+}
+
+
+/**
+ * 做两端对齐的内容排版
+ * @param gap 内容之间的间距 默认是margin-left
+ */
+.justify-cont(@item-seletor, @gap, @gap-type: margin-left){
+    font-size: 0;
+    @{item-seletor}{
+        display: inline-block;
+        vertical-align: top;
+        .px2rem(@gap-type, @gap);
+        &:first-child{
+            @{gap-type}: 0;
+        }
+    }
+}
+
+.font-size(@px){
+    .px2rem(font-size, @px);
+}
+
+// 外边距
+.margin-left(@px){
+    .px2rem(margin-left, @px);
+}
+.margin-right(@px){
+    .px2rem(margin-right, @px);
+}
+.margin-top(@px){
+    .px2rem(margin-top, @px);
+}
+.margin-bottom(@px){
+    .px2rem(margin-bottom, @px);
+}
+.margin(@px){
+    .px2rem(margin, @gap);
+}
+.margin(@v, @h){
+    .margin-top(@v);
+    .margin-right(@h);
+    .margin-bottom(@v);
+    .margin-left(@h);
+}
+.margin(@top, @h, @bottom){
+    .margin-top(@top);
+    .margin-right(@h);
+    .margin-bottom(@bottom);
+    .margin-left(@h);
+}
+.margin(@top, @right, @bottom, @left){
+    .margin-top(@top);
+    .margin-right(@right);
+    .margin-bottom(@bottom);
+    .margin-left(@left);
+}
+
+// 内边距
+.padding-left(@px){
+    .px2rem(padding-left, @px);
+}
+.padding-right(@px){
+    .px2rem(padding-right, @px);
+}
+.padding-top(@px){
+    .px2rem(padding-top, @px);
+}
+.padding-bottom(@px){
+    .px2rem(padding-bottom, @px);
+}
+.padding(@px){
+    .padding-top(@px);
+    .padding-right(@px);
+    .padding-bottom(@px);
+    .padding-left(@px);
+}
+.padding(@v, @h){
+    .padding-top(@v);
+    .padding-right(@h);
+    .padding-bottom(@v);
+    .padding-left(@h);
+}
+.padding(@top, @h, @bottom){
+    .padding-top(@top);
+    .padding-right(@h);
+    .padding-bottom(@bottom);
+    .padding-left(@h);
+}
+.padding(@top, @right, @bottom, @left){
+    .padding-top(@top);
+    .padding-right(@right);
+    .padding-bottom(@bottom);
+    .padding-left(@left);
+}
+
+// 绝对定位
+.left(@px){
+    .px2rem(left, @px);
+}
+.right(@px){
+    .px2rem(right, @px);
+}
+.top(@px){
+    .px2rem(top, @px);
+}
+.bottom(@px){
+    .px2rem(bottom, @px);
+}
+
+.border-radius(@px){
+    .px2rem(border-radius, @px);
+}
+.border-width(@px){
+    .px2rem(border-width, @px);
+}
+.line-height(@px){
+    .px2rem(line-height, @px);
+}
+.background-size(@w, @h){
+    .px2rem(background-size, @w, @h);
+}
+.background-position-x(@px){
+    .px2rem(background-position-x, @px);
+}
+.background-position-y(@px){
+    .px2rem(background-position-y, @px);
+}
+
+.line(@selector, @color, @pre:before){
+    @{selector} {
+        position: relative;
+    }
+    @{selector}:@{pre} {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: auto;
+        right: auto;
+        height: 1px;
+        width: 100%;
+        background-color: @color;
+        display: block;
+        z-index: 15;
+        -webkit-transform-origin: 50% 0;
+        transform-origin: 50% 0
+    }
+
+    html.pixel-ratio-2 @{selector}:@{pre} {
+        -webkit-transform: scaleY(.5);
+        transform: scaleY(.5)
+    }
+
+    html.pixel-ratio-3 @{selector}:@{pre} {
+        -webkit-transform: scaleY(.33);
+        transform: scaleY(.33)
+    }
+}
+.lineVertical(@selector, @color, @pre:before){
+    @{selector} {
+        position: relative;
+    }
+    @{selector}:@{pre} {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: auto;
+        right: auto;
+        width: 1px;
+        height: 100%;
+        background-color: @color;
+        display: block;
+        z-index: 15;
+        -webkit-transform-origin: 0 50%;
+        transform-origin: 0 50%;
+    }
+
+    html.pixel-ratio-2 @{selector}:@{pre} {
+        -webkit-transform: scaleX(.5);
+        transform: scaleX(.5)
+    }
+
+    html.pixel-ratio-3 @{selector}:@{pre} {
+        -webkit-transform: scaleX(.33);
+        transform: scaleX(.33)
+    }
+}
+
+.trans(@time: .25s) {
+    -webkit-transition: all @time linear;
+    -ms-transition: all @time linear;
+    -o-transition: all @time linear;
+    transition: all @time linear;
+}
