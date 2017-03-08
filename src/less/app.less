@@ -1,7 +1,45 @@
 /* =========
 Your custom styles go here
- ========= */
- @import "reset.less";
-.page {
-	background-color: #fff;
+========= */
+@import "reset.less";
+// .page {
+// 	background-color: #fff;
+// }
+h3, h2, p {
+	margin: 0 0;
+}
+
+.media {
+	.margin-top(40px); 
+	.title {
+		.font-size(70px);
+		color: #000;
+		text-decoration: none;
+		font-weight: 600;
+	}
+	.column {
+		.info {
+			position: relative;
+			img {
+				width: 100%;
+				height: auto;
+			}
+			span {
+				display: block;
+				position: absolute;
+				bottom: 100px;
+				left: 0;
+				width: 100%;
+				padding-left: 10px;
+				padding-right: 10px;
+				box-sizing: border-box;
+			}
+			h3, p {
+				color: #fff;
+				text-shadow: 1px 1px 0 #000;
+				display: block;
+			}
+		}
+		
+	}
 }
