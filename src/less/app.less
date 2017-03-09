@@ -2,20 +2,31 @@
 Your custom styles go here
 ========= */
 @import "reset.less";
-// .page {
-// 	background-color: #fff;
-// }
+@import "style.less";
+
 h3, h2, p {
 	margin: 0 0;
 }
+// change f7 default set
+.navbar {
+	background-color: black;
+	.icon-user, .icon-menu {
+		color: #fff;
+	}
+}
+.searchbar {
+	background-color: #fff;
+}
 
+// index page
 .media {
+	.margin-top(40px); 
 	.index{
 		margin-bottom: 50px;
 	}
-	.margin-top(40px); 
-	.title {
-		.font-size(70px);
+	.title {		
+		padding-left: 10px;
+		.font-size(60px);
 		color: #000;
 		text-decoration: none;
 		font-weight: 600;
@@ -42,10 +53,13 @@ h3, h2, p {
 				text-shadow: 1px 1px 0 #000;
 				display: block;
 			}
+			h2 {
+				.font-size(50px);
+			}
 			p {
 				.font-size(38px); 
 			}
 		}
-		
+
 	}
 }
