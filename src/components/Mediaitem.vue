@@ -7,7 +7,7 @@
         <span>
           <div class="content">
             <a class="text" href="/tv/1402">
-              <h3>行尸走肉</h3>
+              <h2>行尸走肉</h2>
             </a>
             <a class="text">
               <p>New episode airs in 4 days</p>
@@ -20,7 +20,7 @@
         <span>
           <div class="content">
             <a class="text" href="/tv/1402">
-              <h3>行尸走肉</h3>
+              <h2>行尸走肉</h2>
             </a>
             <a class="text" alt="Season 7, Episode 13" title="Season 7, Episode 13" href="/tv/1402/season/7/episode/13">
               <p>New episode airs in 4 days</p>
@@ -33,7 +33,7 @@
         <span>
           <div class="content">
             <a class="text" href="/tv/1402">
-              <h3>行尸走肉</h3>
+              <h2>行尸走肉</h2>
             </a>
             <a class="text" alt="Season 7, Episode 13" title="Season 7, Episode 13" href="/tv/1402/season/7/episode/13">
               <p>New episode airs in 4 days</p>
