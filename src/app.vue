@@ -65,10 +65,6 @@
       }
     },
     mounted () {
-      // this.$http.get('https://api.themoviedb.org/3/tv/1402?api_key=215d774e3ae6ecca32d95f20baa55cb0').then(function(res) { 
-      //     console.log(res.data);
-      // })
-      // 
       this.preLoadImg(this.tvData, this.defaultTvData);
       this.preLoadImg(this.moiveData, this.defaultMoiveData);
     },

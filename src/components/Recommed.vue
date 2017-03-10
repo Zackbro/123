@@ -2,12 +2,12 @@
 	<div class="sub-media">
 		<h2 class="category"><span class="title">推荐列表</span></h2>
 		<ul>
-			<li>
-				<a href="/list/509ec17b19c2950a0600050d">
-					<img class="poster" alt="Best Picture Winners - The Academy Awards" src="https://image.tmdb.org/t/p/w184_and_h276_bestv2/1ydP3HPsFB0aLVijHXt1obSLqlC.jpg">
+			<li v-for="item in list">
+				<a :href="'/list/' + item.id">
+					<img class="poster" :alt=item.name :src="'https://image.tmdb.org/t/p/w184_and_h276_bestv2/' + item.poster_path">
 				</a>
-				<h3><a href="/list/509ec17b19c2950a0600050d">Best Picture Winners - The Academy Awards</a></h3>
-				<p>Birdman, 12 Years a Slave, Argo, 84 more...</p>
+				<h3><a :href="'/list/' + item.id">{{item.name}}</a></h3>
+				<p>{{item.description}}</p>
 			</li>
 		</ul>
 	</div>
@@ -15,7 +15,35 @@
 </template>
 
 <script>
+	import API from '../utils/api'
 	export default {
-
+		data () {
+			return {
+				list: [],
+				recList1: {},
+				recList2: {},
+				recList3: {}				
+			}
+		},
+		mounted () {
+			this.$http.get(API.recList1).then(function (res) {
+				this.recList1 = res.data;
+				console.log(res.data);
+				this.list.push(this.recList1);
+			});
+			this.$http.get(API.recList2).then(function (res) {
+				this.recList2 = res.data;
+				this.list.push(this.recList2);
+			});
+			this.$http.get(API.recList3).then(function (res) {
+				this.recList3 = res.data;
+				this.list.push(this.recList3);
+			});
+			this.$http.get('https://www.themoviedb.org/3/translation_popup?language=zh-CN&media_type=&media_id=&referral=%2F').then(function (res) {
+				console.log(res.data);
+			});
+		},
+		methods: {
+		}
 	}
 </script>
