@@ -39,9 +39,6 @@
 				this.recList3 = res.data;
 				this.list.push(this.recList3);
 			});
-			this.$http.get('https://www.themoviedb.org/3/translation_popup?language=zh-CN&media_type=&media_id=&referral=%2F').then(function (res) {
-				console.log(res.data);
-			});
 		},
 		methods: {
 		}

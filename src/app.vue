@@ -42,9 +42,10 @@
               </div>
             </div>
             <subMedia></subMedia>
-
+            <myfooter></myfooter>
           </f7-page>
         </f7-pages>
+        
       </f7-view>
     </f7-views>
 
@@ -55,6 +56,7 @@
   import indexData from './utils/constant'
   import media from './components/Mediaitem'
   import subMedia from './components/Recommed'
+  import myfooter from './components/Footer'
   export default {
     data() {
       return {
@@ -83,7 +85,8 @@
     },
     components: {
       media,
-      subMedia
+      subMedia,
+      myfooter
     }
   }
 </script>
