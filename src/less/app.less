@@ -4,8 +4,11 @@ Your custom styles go here
 @import "reset.less";
 @import "style.less";
 
-h3, h2, p {
+h3, h2, p,{
 	margin: 0 0;
+}
+ul, li {
+	padding: 0;
 }
 // change f7 default set
 .navbar {
@@ -61,5 +64,39 @@ h3, h2, p {
 			}
 		}
 
+	}
+}
+
+.sub-media {
+	.title {
+		padding-left: 10px;
+		.font-size(55px);
+		color: #000;
+	}
+	li {
+		img {
+			float: left;
+			margin: 0 10px;
+			.width(276px);
+			.height(406px);
+		}
+		a {
+			padding-right: 6px;
+			color: #00d573;
+			font-weight: 600;
+			max-width: 100%;
+			white-space: wrap;
+			overflow: hidden;
+			
+		}
+		p {
+			.font-size(38px);
+			max-width: 100%;
+			white-space: wrap;
+			overflow: hidden;
+			padding-right: 6px;
+			font-weight: 300;
+			text-overflow: clip;
+		}
 	}
 }

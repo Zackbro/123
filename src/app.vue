@@ -30,13 +30,19 @@
             <div class="media">
               <div class="index tv">
                 <h2><a class="title" href="">在电视上</a></h2>
+                <div class="column">
                 <media v-for="item in defaultTvData" :item="item"></media>
+                </div>
               </div>
               <div class="index moive">
                 <h2><a class="title" href="">在影院里</a></h2>
+                <div class="column">
                 <media v-for="item in defaultMoiveData" :item="item"></media>
+                </div>
               </div>
             </div>
+            <subMedia></subMedia>
+
           </f7-page>
         </f7-pages>
       </f7-view>
@@ -48,6 +54,7 @@
 <script>
   import indexData from './utils/constant'
   import media from './components/Mediaitem'
+  import subMedia from './components/Recommed'
   export default {
     data() {
       return {
@@ -79,7 +86,8 @@
       }
     },
     components: {
-      media
+      media,
+      subMedia
     }
   }
 </script>

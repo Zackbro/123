@@ -1,5 +1,4 @@
-<template>
-  <div class="column">
+<template> 
   <div class="info">
       <a href="/tv/1402"><img :src=item.img></a>
       <span>
@@ -13,7 +12,6 @@
         </div>
       </span>
     </div>
-  </div>
 </template>
 
 <script>
