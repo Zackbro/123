@@ -38,6 +38,8 @@ new Vue({
     /* Uncomment to enable Material theme: */
     // material: true,
     routes: Routes,
+    pushState: true,
+    pushStateSeparator: '#'
   },
   // Register App Component
   components: {

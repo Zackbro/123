@@ -1,6 +1,6 @@
 <template> 
   <div class="info">
-      <a href="/tv/1402"><img :src=item.img></a>
+      <f7-link href="/detail"><img :src=item.img></f7-link>
       <span>
         <div class="content">
           <a class="text" href="/tv/1402">

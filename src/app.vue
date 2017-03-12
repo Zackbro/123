@@ -26,7 +26,6 @@
             placeholder="搜索电影、剧集、人物"
             :clear-button="true"
             ></f7-searchbar>
-
             <div class="media">
               <div class="index tv">
                 <h2><a class="title" href="">在电视上</a></h2>
